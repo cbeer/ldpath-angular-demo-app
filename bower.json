@@ -3,7 +3,8 @@
     "name": "bower-rails generated lib assets",
     "dependencies": {
       "angular": "v1.3.8",
-      "angular-ui-ace": "latest"
+      "angular-ui-ace": "latest",
+      "angular-highlightjs": "latest"
     }
   },
   "vendor": {

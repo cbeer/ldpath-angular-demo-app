@@ -2,7 +2,7 @@ angular.module('app.exampleApp').controller("ExampleCtrl", [
   '$scope', '$http', function($scope, $http) {
     console.log('ExampleCtrl running');
 
-    $scope.ldpath = { url: "", program: ""};
+    $scope.ldpath = { url: "", program: "", response: ""};
     $scope.response = { content: ""};
 
     $scope.$watchCollection('ldpath', function(newValue, oldValue) {
@@ -15,7 +15,7 @@ angular.module('app.exampleApp').controller("ExampleCtrl", [
       }
 
       $http.post("/evaluate", { url: ldpath.url, program: ldpath.program}).success(function(data,status) {
-        $scope.response.content = data;
+        $scope.response.content = JSON.stringify(data, null, 2);
       });
     };
   }

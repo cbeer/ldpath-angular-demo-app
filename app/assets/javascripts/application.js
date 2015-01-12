@@ -18,6 +18,8 @@
 //= require ace-builds/src-min-noconflict/ace
 //= require angular-ui-ace/ui-ace.js
 //= require ace-builds/src-min-noconflict/ext-language_tools
+//= require highlightjs/highlight.pack.js
+//= require angular-highlightjs/angular-highlightjs
 
 //= require ldpath-app/app
 //= require_tree ./ldpath-app/templates
