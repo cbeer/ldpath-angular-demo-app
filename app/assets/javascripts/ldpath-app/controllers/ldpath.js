@@ -1,7 +1,7 @@
 angular.module('app.ldpathApp').controller("LdpathCtrl", [
   '$scope', '$http', function($scope, $http) {
 
-    $scope.ldpath = { url: "", program: "", response: ""};
+    $scope.ldpath = { url: "http://www.bbc.co.uk/programmes/b0081dq5.rdf", program: "", response: ""};
     $scope.response = { content: ""};
 
     $scope.$watchCollection('ldpath', function(newValue, oldValue) {
