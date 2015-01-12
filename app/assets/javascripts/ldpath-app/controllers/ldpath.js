@@ -12,9 +12,11 @@ angular.module('app.ldpathApp').controller("LdpathCtrl", [
       if (ldpath.url.length == 0 || ldpath.program.length == 0) {
         return;
       }
+      NProgress.start();
 
       $http.post("/evaluate", { url: ldpath.url, program: ldpath.program}).success(function(data,status) {
         $scope.response.content = JSON.stringify(data, null, 2);
+        NProgress.done();
       });
     };
   }

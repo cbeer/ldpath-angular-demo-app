@@ -11,6 +11,8 @@
  * file per style scope.
  *
  *= require 'highlightjs/styles/github'
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require_tree .
  *= require_self
  */

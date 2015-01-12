@@ -20,6 +20,7 @@
 //= require ace-builds/src-min-noconflict/ext-language_tools
 //= require highlightjs/highlight.pack.js
 //= require angular-highlightjs/angular-highlightjs
+//= require nprogress
 
 //= require ldpath-app/app
 //= require_tree ./ldpath-app/templates

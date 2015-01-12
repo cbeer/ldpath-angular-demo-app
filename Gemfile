@@ -43,6 +43,7 @@ end
 
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
+gem 'nprogress-rails'
 gem 'bower-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
