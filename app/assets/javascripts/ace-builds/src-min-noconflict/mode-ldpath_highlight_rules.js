@@ -12,32 +12,11 @@ ace.define("ace/mode/ldpath_highlight_rules", function(require, exports, module)
     this.$rules = {
       "start" : [
     {
-      token: ["constant.language.uri", "meta.tag.language"],
-      regex: '(<[^>]+>)(\\[@\\w+\\])?'
+      token: ['punctuation.eol'],
+      regex: '(\\s*;\\s*)$'
     },
     {
-      token: ["keyword.operator"],
-      regex: '(\\s*[/|]\\s*)'
-    },
-    {
-      token: ["keyword.operator"],
-      regex: '(\\s*::\\s*)'
-    },
-
-    {
-      token: ["punctuation"],
-      regex: '([\\(|\\)])'
-    },
-    {
-      token: ["text.prefix", "punctuation.ns", "text.localName", "meta.tag.language"],
-      regex: '([^\\s:]+)(:)(\\w+)(\\[@\\w+\\])?'
-    },
-    {
-      token: ["variable", "text"],
-      regex: '^(\\w+)(\\s*=)'
-    },
-    {
-      token: ['keyword.operator.prefix', 'constant'],
+      token: ['keyword.operator.prefix', 'constant.prefix'],
       regex: '^(@prefix\\s+)(\\w+)'
     },
     {
@@ -45,8 +24,64 @@ ace.define("ace/mode/ldpath_highlight_rules", function(require, exports, module)
       regex: '^(@\\w+)'
     },
     {
-      token: ['punctuation'],
-      regex: '(\\s*;\\s*)$'
+      token : "constant.string", // single line
+      regex : '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]'
+    },
+    {
+      token: ["constant.language.uri"],
+      regex: '(<[^>]+>)'
+    },
+    {
+      token: ["meta.tag.language"],
+      regex: '(\\[@\\w+\\])'
+    },
+    {
+      token: ["keyword.selector.self_selector"],
+      regex: '(\\s*\\.\\s*)'
+    },
+    {
+      token: ["keyword.selector.compound_selector"],
+      regex: '(\\s*[/|&]\\s*)'
+    },
+    {
+      token: ["keyword.selector.function_selector"],
+      regex: '(\\s*fn:\\w+)'
+    },
+    {
+      token: ["keyword.operator.recursive_operator"],
+      regex: '(\\s*([\\*\\+]|({\\s*\\d*\\s*,\\s*\\d*\\s*}))\\s*)'
+    },
+    {
+      token: ["keyword.operator.test.test_type"],
+      regex: '(\\^\\^)'
+    },
+    {
+      token: ["keyword.operator.test.test_is"],
+      regex: '(\\s+is\\s+)'
+    },
+    {
+      token: ["keyword.operator.reverse"],
+      regex: '(\\s*\\^)'
+    },
+    {
+      token: ["keyword.operator.dcolon"],
+      regex: '(\\s*::\\s*)'
+    },
+    {
+      token: ["punctuation.grouping"],
+      regex: '([\\(|\\)])'
+    },
+    {
+      token: ["punctuation.testing"],
+      regex: '([\\[|\\]])'
+    },
+    {
+      token: ["constant.prefix", "punctuation.ns", "constant.localName"],
+      regex: '([^\\s:]+)(:)(\\w+)'
+    },
+    {
+      token: ["variable", "punctuation.assign"],
+      regex: '^(\\w+)(\\s*=)'
     },
     {
       defaultToken : "text"
