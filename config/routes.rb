@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'example#index'
   get 'example' => 'example#index'
   post 'evaluate' => 'example#show'
   # The priority is based upon order of creation: first created -> highest priority.
