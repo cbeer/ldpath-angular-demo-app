@@ -1,6 +1,5 @@
-angular.module('app.exampleApp').controller("ExampleCtrl", [
+angular.module('app.ldpathApp').controller("LdpathCtrl", [
   '$scope', '$http', function($scope, $http) {
-    console.log('ExampleCtrl running');
 
     $scope.ldpath = { url: "", program: "", response: ""};
     $scope.response = { content: ""};

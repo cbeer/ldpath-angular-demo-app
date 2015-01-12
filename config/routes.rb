@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  root 'example#index'
-  get 'example' => 'example#index'
-  post 'evaluate' => 'example#show'
+  root 'ldpath#new'
+  post 'evaluate' => 'ldpath#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

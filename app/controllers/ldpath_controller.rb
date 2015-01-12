@@ -1,5 +1,5 @@
-class ExampleController < ApplicationController
-  def index
+class LdpathController < ApplicationController
+  def new
   end
 
   def show
