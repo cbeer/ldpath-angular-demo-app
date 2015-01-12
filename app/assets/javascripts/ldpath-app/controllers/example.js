@@ -10,8 +10,7 @@ angular.module('app.exampleApp').controller("ExampleCtrl", [
     });
 
     $scope.evaluate = function(ldpath) {
-      console.log("Evaluate " + ldpath.url + " :" + ldpath.program);
-      if (ldpath.url.length == 0) {
+      if (ldpath.url.length == 0 || ldpath.program.length == 0) {
         return;
       }
 
