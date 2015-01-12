@@ -47,7 +47,7 @@ gem 'nprogress-rails'
 gem 'bower-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'ldpath'
+gem 'ldpath', github: "cbeer/ldpath.rb"
 gem 'rest-client'
 gem 'rack-cache'
 gem 'rest-client-components'

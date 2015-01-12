@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/cbeer/ldpath.rb.git
+  revision: 0ea68e9e81c43ef40e76d7e2f2496f50b207806f
+  specs:
+    ldpath (0.0.1)
+      linkeddata
+      parslet
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,9 +99,6 @@ GEM
     json (1.8.2)
     json-ld (1.1.7)
       rdf (~> 1.1, >= 1.1.4)
-    ldpath (0.0.1)
-      linkeddata
-      parslet
     link_header (0.0.8)
     linkeddata (1.1.2)
       equivalent-xml (~> 0.4)
@@ -267,7 +272,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  ldpath
+  ldpath!
   nprogress-rails
   rack-cache
   rails (= 4.2.0)
