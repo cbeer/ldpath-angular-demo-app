@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/cbeer/ldpath.rb.git
-  revision: 0ea68e9e81c43ef40e76d7e2f2496f50b207806f
+  revision: b1487a0257615f046a1e40753c4fd0e84bc97002
   specs:
     ldpath (0.0.1)
       linkeddata

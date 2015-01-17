@@ -3,10 +3,13 @@ ace.define("ace/mode/ldpath", function(require, exports, module) {
   
   var oop = require("../lib/oop");
   var TextMode = require("./text").Mode;
+  
+  var LdpathCompletions = require("./ldpath_completions").LdpathCompletions;
   var LdpathHighlightRules = require("./ldpath_highlight_rules").LdpathHighlightRules;
   
   var Mode = function() {
     this.HighlightRules = LdpathHighlightRules;
+    this.completer = new LdpathCompletions();
   };
   oop.inherits(Mode, TextMode);
   

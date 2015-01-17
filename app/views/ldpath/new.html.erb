@@ -9,6 +9,7 @@
       <label for="program">Program</label>
       <div ui-ace="{
         mode: 'ldpath',
+        onLoad: aceLoaded,
         require: ['ace/ext/language_tools'],
         advanced: {
           enableSnippets: true,

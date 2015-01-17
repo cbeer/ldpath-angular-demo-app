@@ -8,6 +8,12 @@ angular.module('app.ldpathApp').controller("LdpathCtrl", [
       $scope.evaluate(newValue);
     });
 
+    $scope.aceLoaded = function(_editor) {
+      // Context
+      _editor.$http = $http;
+      _editor.$ldpath = $scope.ldpath;
+    };
+
     $scope.evaluate = function(ldpath) {
       if (ldpath.url.length == 0 || ldpath.program.length == 0) {
         return;

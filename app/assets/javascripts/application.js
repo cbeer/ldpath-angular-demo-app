@@ -15,9 +15,9 @@
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-rails-templates
-//= require ace-builds/src-min-noconflict/ace
+//= require ace-builds/src-noconflict/ace
 //= require angular-ui-ace/ui-ace.js
-//= require ace-builds/src-min-noconflict/ext-language_tools
+//= require ace-builds/src-noconflict/ext-language_tools
 //= require highlightjs/highlight.pack.js
 //= require angular-highlightjs/angular-highlightjs
 //= require nprogress
