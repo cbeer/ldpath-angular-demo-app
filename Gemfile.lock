@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/cbeer/ldpath.rb.git
-  revision: b1487a0257615f046a1e40753c4fd0e84bc97002
+  revision: 8bbf4ee7eb6a2e4379849584d5e732e2f9848aab
   specs:
     ldpath (0.0.1)
       linkeddata
@@ -51,13 +51,15 @@ GEM
     angular_rails_csrf (1.0.3)
       rails (>= 3, < 5)
     arel (6.0.0)
-    autoprefixer-rails (4.0.2.2)
+    autoprefixer-rails (5.1.5)
       execjs
+      json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     blankslate (3.1.3)
-    bootstrap-sass (3.3.1.0)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     bower-rails (0.9.2)
     builder (3.2.2)
     byebug (3.5.1)
@@ -70,8 +72,9 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
+    coffee-script-source (1.9.0)
     columnize (0.9.0)
+    dalli (2.7.2)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     ebnf (0.3.6)
@@ -81,8 +84,8 @@ GEM
     equivalent-xml (0.5.1)
       nokogiri (>= 1.4.3)
     erubis (2.7.0)
-    execjs (2.2.2)
-    globalid (0.3.0)
+    execjs (2.3.0)
+    globalid (0.3.2)
       activesupport (>= 4.1.0)
     haml (4.0.6)
       tilt
@@ -128,9 +131,9 @@ GEM
     multi_json (1.10.1)
     net-http-persistent (2.9.4)
     netrc (0.10.2)
-    nokogiri (1.6.5)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    nprogress-rails (0.1.6.5)
+    nprogress-rails (0.1.6.6)
     parslet (1.6.2)
       blankslate (>= 2.0, <= 4.0)
     rack (1.6.0)
@@ -163,7 +166,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    rdf (1.1.7)
+    rdf (1.1.8)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (1.1.0)
       rdf (>= 1.1)
@@ -211,7 +214,7 @@ GEM
     rest-client-components (1.3.0)
       rack (>= 1.0.1)
       rest-client (>= 1.6.0)
-    sass (3.4.9)
+    sass (3.4.11)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -233,13 +236,13 @@ GEM
     sparql-client (1.1.3.1)
       net-http-persistent (~> 2.9)
       rdf (~> 1.1)
-    spring (1.2.0)
+    spring (1.3.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.2)
+    sprockets-rails (2.2.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -270,6 +273,7 @@ DEPENDENCIES
   bower-rails
   byebug
   coffee-rails (~> 4.1.0)
+  dalli
   jbuilder (~> 2.0)
   jquery-rails
   ldpath!

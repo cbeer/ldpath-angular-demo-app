@@ -51,3 +51,7 @@ gem 'ldpath', github: "cbeer/ldpath.rb"
 gem 'rest-client'
 gem 'rack-cache'
 gem 'rest-client-components'
+
+group :production do
+  gem 'dalli'
+end
