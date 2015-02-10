@@ -2,7 +2,7 @@
   <form>
     <div class="form-group">
       <label for="url">URL</label>
-      <input id="url" class="form-control" type="text" ng-model="ldpath.url" ng-model-options="{ updateOn: 'blur' }" />
+      <%= text_field_tag "url", params[:url], :'ng-init' => "ldpath.url = '#{escape_once(params[:url])}'", class: "form-control", :'ng-model' => 'ldpath.url', :'ng-model-options' => "{ updateOn: 'blur' }" %>
     </div>
 
     <div class="form-group">
