@@ -32,7 +32,7 @@ ace.define("ace/mode/ldpath_completions", function(require, exports, module) {
       var $ldpath = editor.$ldpath;
       
       $http.post("/evaluate", { url: $ldpath.url, program: program}).success(function(data,status) {
-        callback(null, $.map(data["__autocomplete"], function(e) {
+        callback(null, $.map($.unique(data["__autocomplete"]), function(e) {
           return { value: "<" + e + ">"};
         }));
       });
