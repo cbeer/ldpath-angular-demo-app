@@ -3,6 +3,6 @@ class LdpathController < ApplicationController
   end
 
   def show
-    render json: Ldpath::Program.parse(params[:program]).evaluate(RDF::URI.new(params[:url]))
+    render json: Ldpath::Program.parse(params[:program].strip).evaluate(RDF::URI.new(params[:url]))
   end
 end

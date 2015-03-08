@@ -6,6 +6,7 @@ ace.define("ace/mode/ldpath_completions", function(require, exports, module) {
 
   (function() {
     var tap = "?<__autocomplete>fn:predicates()";
+    var prefixes = {};
     this.getCompletions = function(editor, session, pos, prefix, callback) {
       var line = session.getLine(pos.row);
 
@@ -24,16 +25,31 @@ ace.define("ace/mode/ldpath_completions", function(require, exports, module) {
       if (!line_with_tap.match(/::/)) {
         line_with_tap += " :: xsd:string ;";
       }
-      var prefixes = $.grep(session.getLines(0,session.getRowLength()), function(e) { return e.match(/^@prefix/); });
-      
-      var program = prefixes + "\n" + line_with_tap;
+      var prefix_lines = $.grep(session.getLines(0,session.getRowLength()), function(e) { return e.match(/^@prefix/); });
+
+      $.each(prefix_lines, function(i, line) {
+        var match = line.match(/@prefix\s+([^:]+):\s*<([^>]+)>/);
+        prefixes[match[2]] = match[1];
+      });
+
+      var program = prefix_lines.join("\n") + "\n" + line_with_tap;
 
       var $http = editor.$http;
       var $ldpath = editor.$ldpath;
       
       $http.post("/evaluate", { url: $ldpath.url, program: program}).success(function(data,status) {
+        var uris = Object.keys(prefixes).sort(function(a,b) { return b.length - a.length; });
+
         callback(null, $.map($.unique(data["__autocomplete"]), function(e) {
-          return { value: "<" + e + ">"};
+          var val = "<" + e + ">";
+          uris.some(function(uri) {
+            var idx = e.search(uri);
+            if (idx == 0) {
+              val = prefixes[uri] + ":" + e.slice(uri.length);
+              return true;
+            }
+          });
+          return { value: val};
         }));
       });
     }
