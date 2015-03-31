@@ -22,13 +22,7 @@
 //= require angular-highlightjs/angular-highlightjs
 //= require nprogress
 
-//= require ldpath-app/app
-//= require_tree ./ldpath-app/templates
 //= require_tree ./ldpath-app/modules
-//= require_tree ./ldpath-app/filters
-//= require_tree ./ldpath-app/directives
-//= require_tree ./ldpath-app/models
-//= require_tree ./ldpath-app/services
 //= require_tree ./ldpath-app/controllers
 
 //= require_tree .
