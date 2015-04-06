@@ -1,0 +1,6 @@
+web:
+  build: .
+  ports:
+   - 80
+  environment:
+    SECRET_KEY_BASE: "xyz"
