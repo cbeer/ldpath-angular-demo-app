@@ -48,10 +48,7 @@ gem 'bower-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'ldpath', github: "cbeer/ldpath.rb"
-gem 'rest-client'
-gem 'rack-cache'
-gem 'rest-client-components'
-
-group :production do
-  gem 'dalli'
-end
+gem 'faraday'
+gem 'faraday_middleware'
+gem 'faraday-http-cache'
+gem 'http_logger'
