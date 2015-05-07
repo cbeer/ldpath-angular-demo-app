@@ -14,8 +14,8 @@ ace.define("ace/mode/ldpath", function(require, exports, module) {
   oop.inherits(Mode, TextMode);
   
   (function() {
-    
     this.lineCommentStart = "#";
+    this.blockComment = {start: "/*", end: "*/"};
     
     this.getNextLineIndent = function(state, line, tab) {
       var indent = this.$getIndent(line);
